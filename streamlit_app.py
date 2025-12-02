@@ -10,6 +10,9 @@ from embedchain import App
 
 #load_dotenv()  # per usare OPENAI_API_KEY da .env
 
+openai_key = os.getenv("OPENAI_API_KEY", "NON TROVATA")
+st.write(f"OPENAI_API_KEY presente? {'sì' if openai_key != 'NON TROVATA' else 'no'}")
+
 EMBEDCHAIN_CONFIG = {
     "llm": {
         "provider": "openai",
