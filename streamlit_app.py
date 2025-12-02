@@ -123,7 +123,7 @@ Usa frasi brevi e tono professionale.
 def main():
     st.set_page_config(page_title="GEMMA - Presentazione aziendale da sito web", page_icon="🏢", layout="centered")
 
-    st.title("🏢 GEMMA - Generatore di presentazione aziendale da sito web")
+    st.title("🏢 GEMMA - Generatore della presentazione aziendale partendo dal sito web")
     st.write("Inserisci l'URL del sito aziendale e scegli il formato di output.")
 
     url = st.text_input("URL del sito", placeholder="https://www.esempio.it")
