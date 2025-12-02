@@ -1,6 +1,6 @@
 import os
 import json
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 import streamlit as st
 from embedchain import App
 
@@ -8,7 +8,7 @@ from embedchain import App
 # Config e helper Embedchain
 # ==========================
 
-load_dotenv()  # per usare OPENAI_API_KEY da .env
+#load_dotenv()  # per usare OPENAI_API_KEY da .env
 
 EMBEDCHAIN_CONFIG = {
     "llm": {
