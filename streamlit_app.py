@@ -11,7 +11,8 @@ from embedchain import App
 #load_dotenv()  # per usare OPENAI_API_KEY da .env
 
 openai_key = os.getenv("OPENAI_API_KEY", "NON TROVATA")
-st.write(f"OPENAI_API_KEY presente? {'sì' if openai_key != 'NON TROVATA' else 'no'}")
+if openai_key != 'NON TROVATA':
+    st.write(f"OPENAI_API_KEY presente? {'sì' if openai_key != 'NON TROVATA' else 'no'}")
 
 EMBEDCHAIN_CONFIG = {
     "llm": {
@@ -120,9 +121,9 @@ Usa frasi brevi e tono professionale.
 # ==========================
 
 def main():
-    st.set_page_config(page_title="Presentazione aziendale da sito web", page_icon="🏢", layout="centered")
+    st.set_page_config(page_title="GEMMA - Presentazione aziendale da sito web", page_icon="🏢", layout="centered")
 
-    st.title("🏢 Generatore di presentazione aziendale da sito web")
+    st.title("🏢 GEMMA - Generatore di presentazione aziendale da sito web")
     st.write("Inserisci l'URL del sito aziendale e scegli il formato di output.")
 
     url = st.text_input("URL del sito", placeholder="https://www.esempio.it")
